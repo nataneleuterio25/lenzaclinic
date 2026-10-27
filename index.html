@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lenza Clinic | Odontologia e Harmonização Orofacial</title>
+<meta name="description" content="Odontologia estética e harmonização orofacial com cuidado individualizado e naturalidade. Agende sua avaliação na Lenza Clinic.">
+<meta property="og:title" content="Lenza Clinic | Odontologia e Harmonização Orofacial">
+<meta property="og:description" content="Estética, saúde e naturalidade em cada detalhe.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--champagne:#DCCFB8;--greige:#B8AF9B;--olive:#A5A18B;--taupe:#4E483B;--cocoa:#4A2B20;--ochre:#B88345;--warm:#F7F3ED;--walnut:#100904;--bark:#382416;--cream:#FFEDD7;--line:rgba(220,207,184,.28);--display:"Cormorant Garamond","Playfair Display",Georgia,serif;--body:"Inter","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--walnut)}
+body{font-family:var(--body);color:var(--cream);background:var(--walnut);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0)}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:3px}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,6vw,5rem)}
+h2 em,h1 em{font-style:italic;color:var(--champagne)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.7rem;border-radius:999px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--champagne);transition:.3s}
+.btn.solid{background:var(--champagne);color:var(--walnut)}
+.btn.solid:hover{background:var(--cream)}
+.btn.ghost:hover{background:rgba(220,207,184,.14)}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0);transition:.4s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(16,9,4,.62);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-size:1.45rem;letter-spacing:.32em;text-decoration:none}
+.logo small{font-family:var(--body);font-size:.55rem;letter-spacing:.3em;display:block;margin-top:-4px;color:var(--champagne)}
+nav ul{display:flex;gap:2rem;list-style:none;padding:0;align-items:center}
+nav a{white-space:nowrap;text-decoration:none;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+nav a:hover{opacity:1}
+.menu-btn,.menu-close{display:none;background:none;border:1px solid var(--line);color:var(--cream);border-radius:999px;padding:.5rem 1rem;font:inherit;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+@media(max-width:1100px){
+ .menu-btn{display:block}
+ header.scrolled{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(16,9,4,.94)}
+ nav a.btn{font-family:var(--body)}
+ nav{position:fixed;inset:0;background:var(--walnut);display:none;flex-direction:column;justify-content:center;padding:2rem;z-index:60}
+ nav.open{display:flex}
+ nav ul{flex-direction:column;gap:1.6rem;align-items:flex-start}
+ nav a{font-family:var(--display);font-size:2.2rem;letter-spacing:0;text-transform:none}
+ .menu-close{display:block;position:absolute;top:calc(18px + env(safe-area-inset-top,0));right:24px}
+}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,9,4,.55) 0%,rgba(16,9,4,.15) 35%,rgba(16,9,4,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:clamp(48px,9vh,110px)}
+.hero h1{font-size:clamp(3.2rem,10vw,8.4rem);margin:1.1rem 0 1.4rem;max-width:15ch}
+.hero p.sub{max-width:46ch;font-size:1.05rem;color:var(--champagne);margin-bottom:2rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.9rem}
+.hero .caption{position:absolute;z-index:2;right:24px;bottom:28px;padding:.7rem 1rem;border:1px solid var(--line);border-radius:12px;background:rgba(16,9,4,.35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:700px){.hero .caption{display:none}}
+/* manifesto */
+.manifesto{padding:clamp(100px,18vw,220px) 0;background:var(--bark);text-align:center;border-block:1px solid var(--line)}
+.manifesto p.big{font-family:var(--display);font-size:clamp(2.2rem,6.5vw,5.6rem);line-height:1.08;max-width:18ch;margin:1.8rem auto}
+.manifesto .w{opacity:.22;transition:opacity .5s}
+.manifesto .w.on{opacity:1}
+.manifesto .small{color:var(--champagne);max-width:40ch;margin-inline:auto}
+.rule{width:1px;height:70px;background:var(--line);margin:0 auto}
+/* split sections */
+section.split{padding:clamp(80px,12vw,170px) 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px);align-items:center}
+.grid.rev .media{order:2}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.grid.rev .media{order:0}}
+.media{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/5;background:var(--bark)}
+.media img{width:100%;height:100%;object-fit:cover}
+.media.wide img{height:116%;will-change:transform}
+.media.wide{aspect-ratio:16/10}
+.txt h2{margin:1rem 0 1.4rem}
+.txt p{color:var(--champagne);max-width:44ch;margin-bottom:1.1rem}
+.txt .btn{margin-top:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;margin:1.4rem 0 .4rem}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.35rem .95rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+#harmonizacao{background:var(--cocoa)}
+#clinica{background:var(--walnut)}
+.note{font-size:.72rem;opacity:.6;margin-top:.8rem}
+.stack{display:grid;gap:18px}
+/* principles */
+.principles{padding:clamp(80px,11vw,150px) 0;background:var(--warm);color:var(--taupe)}
+.principles h2{color:var(--walnut);max-width:14ch}
+.principles h2 em{color:var(--ochre)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:4rem;border-top:1px solid rgba(78,72,59,.3)}
+.pgrid div{padding:2rem 2rem 0 0}
+.pgrid span{font-family:var(--display);font-size:1rem;color:var(--ochre)}
+.pgrid h3{font-size:2rem;margin:.6rem 0;color:var(--walnut)}
+@media(max-width:760px){.pgrid{grid-template-columns:1fr}}
+/* google */
+.social{padding:clamp(70px,9vw,120px) 0;background:var(--bark);text-align:center}
+.social p{max-width:48ch;margin:1.2rem auto 2rem;color:var(--champagne)}
+/* final */
+.final{position:relative;padding:clamp(110px,16vw,220px) 0;text-align:center;background:radial-gradient(ellipse at 50% 0%,#4A2B20 0%,var(--walnut) 70%)}
+.final h2{max-width:14ch;margin:1rem auto 2.2rem}
+.final .ctas{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center}
+footer{padding:38px 0;border-top:1px solid var(--line);font-size:.78rem;color:var(--olive)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+footer ul{display:flex;gap:1.4rem;list-style:none;padding:0}
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ochre);z-index:70}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.manifesto .w{opacity:1;transition:none}.media img{height:100%!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div id="prog" aria-hidden="true"></div>
+<header id="top">
+ <div class="wrap bar">
+  <a class="logo" href="#inicio" aria-label="Lenza Clinic, início">LENZA<small>CLINIC</small></a>
+  <button class="menu-btn" id="open" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav id="menu" aria-label="Principal">
+   <button class="menu-close" id="close">Fechar</button>
+   <ul>
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#odontologia">Odontologia Estética</a></li>
+    <li><a href="#harmonizacao">Harmonização</a></li>
+    <li><a href="#clinica">A Clínica</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a class="btn solid" href="https://wa.me/message/NBMKC7WYYODZN1" target="_blank" rel="noopener">Agendar avaliação</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="inicio" aria-label="Apresentação">
+ <img class="poster" src="poster.webp" alt="" aria-hidden="true">
+ <video id="hv" autoplay muted loop playsinline preload="metadata" poster="poster.webp" aria-hidden="true"><source src="hero.mp4" type="video/mp4"></video>
+ <div class="wrap">
+  <p class="eyebrow">Odontologia • Harmonização Orofacial</p>
+  <h1>Sua essência.<br><em>Em equilíbrio.</em></h1>
+  <p class="sub">Odontologia estética e harmonização orofacial com planejamento individualizado, cuidado em cada etapa e a naturalidade como direção.</p>
+  <div class="ctas">
+   <a class="btn solid" href="https://wa.me/message/NBMKC7WYYODZN1" target="_blank" rel="noopener">Agendar avaliação</a>
+   <a class="btn ghost" href="#odontologia">Conhecer especialidades</a>
+  </div>
+ </div>
+ <div class="caption">Estética · Saúde · Naturalidade</div>
+</section>
+
+<section class="manifesto" aria-label="Manifesto">
+ <div class="wrap">
+  <div class="rule"></div>
+  <p class="big" id="mf">Cuidado que respeita sua essência.</p>
+  <p class="small reveal">Estética, saúde e naturalidade em cada detalhe.</p>
+  <div class="rule" style="margin-top:1.8rem"></div>
+ </div>
+</section>
+
+<section class="split" id="odontologia">
+ <div class="wrap grid">
+  <div class="media reveal"><img data-par src="odontologia-estetica.webp" alt="Retrato editorial de profissional da Lenza Clinic, em arte da marca" loading="lazy" width="1000" height="1250"></div>
+  <div class="txt reveal">
+   <p class="eyebrow">01 — Odontologia Estética</p>
+   <h2>Sorrisos com <em>identidade.</em></h2>
+   <p>A odontologia estética da Lenza Clinic parte de uma escuta atenta e de uma avaliação individual. A proposta é cuidar da saúde e harmonizar o sorriso de forma natural, respeitando as características de cada pessoa.</p>
+   <ul class="tags"><li>Odontologia estética</li><li>Implantes</li><li>Lentes</li></ul>
+   <div class="media" style="margin:1.6rem 0 1rem;max-width:440px;aspect-ratio:1000/1249"><img src="resultado-odontologia.webp" alt="Resultado de odontologia estética: sorriso de um paciente antes e depois, com detalhe dos dentes" loading="lazy" width="1000" height="1249"></div>
+   <p class="note">Cada caso é avaliado individualmente; os resultados variam de pessoa para pessoa.</p>
+   <a class="btn solid" href="https://wa.me/message/NBMKC7WYYODZN1" target="_blank" rel="noopener">Agendar avaliação</a>
+  </div>
+ </div>
+</section>
+
+<section class="split" id="harmonizacao">
+ <div class="wrap grid rev">
+  <div class="stack reveal">
+   <div class="media"><img data-par src="harmonizacao.webp" alt="Retrato editorial em perfil com a frase “Beleza não é futilidade”, arte da Lenza Clinic" loading="lazy" width="1000" height="1250"></div>
+  </div>
+  <div class="txt reveal">
+   <p class="eyebrow">02 — Harmonização Orofacial</p>
+   <h2>Equilíbrio que <em>não chama atenção.</em></h2>
+   <p>Na harmonização orofacial, o ponto de partida é a avaliação do rosto como um todo. O objetivo é realçar o que já é seu, com proporção, leveza e naturalidade.</p>
+   <div class="media" style="margin:1.6rem 0;aspect-ratio:1200/1200"><img src="resultado-harmonizacao.webp" alt="Resultado de harmonização orofacial: foto de antes e depois de uma paciente" loading="lazy" width="1200" height="1200"></div>
+   <a class="btn solid" href="https://wa.me/message/NBMKC7WYYODZN1" target="_blank" rel="noopener">Agendar avaliação</a>
+  </div>
+ </div>
+</section>
+
+<section class="split" id="clinica">
+ <div class="wrap grid">
+  <div class="media reveal"><img data-par src="quem-somos.webp" alt="Os profissionais da Lenza Clinic em retrato editorial com a frase Estética, Saúde, Naturalidade" loading="lazy" width="1000" height="1250"></div>
+  <div class="txt reveal">
+   <p class="eyebrow">03 — A Clínica</p>
+   <h2>Estética. Saúde. <em>Naturalidade.</em></h2>
+   <p>A Lenza Clinic nasce de uma ideia simples: o mundo lá fora grita com urgência, e aqui dentro cultivamos permanência. Cuidado com propósito, feito com técnica, tempo e atenção a quem está na cadeira.</p>
+   <div class="media wide" style="margin:1.6rem 0"><img data-par src="a-clinica.webp" alt="Entrada da Lenza Clinic com painel de madeira ripada, letreiro dourado e parede verde ao fundo" loading="lazy" width="1360" height="765"></div>
+   <!-- CONTEÚDO PENDENTE: biografias, CRO e endereço, só publicar após confirmação -->
+  </div>
+ </div>
+</section>
+
+<section class="principles" aria-label="Princípios">
+ <div class="wrap">
+  <p class="eyebrow" style="color:var(--taupe)">Nossa forma de cuidar</p>
+  <h2 class="reveal">Três princípios. <em>Uma direção.</em></h2>
+  <div class="pgrid">
+   <div class="reveal"><span>01</span><h3>Planejamento individualizado</h3><p>Cada pessoa é única. Começamos ouvindo e avaliando antes de propor qualquer caminho.</p></div>
+   <div class="reveal"><span>02</span><h3>Naturalidade como direção</h3><p>Realçar, não transformar. O resultado deve combinar com você.</p></div>
+   <div class="reveal"><span>03</span><h3>Cuidado em cada etapa</h3><p>Do primeiro contato ao acompanhamento, com atenção e clareza.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="social" aria-label="Avaliações">
+ <div class="wrap reveal">
+  <p class="eyebrow">Quem já passou por aqui</p>
+  <h2 style="font-size:clamp(2rem,5vw,3.6rem);margin-top:1rem">Veja a clínica <em>no Google</em></h2>
+  <p>Confira avaliações e informações atualizadas diretamente no perfil da Lenza Clinic.</p>
+  <a class="btn ghost" href="https://share.google/Ynf96b1OXLa12j6YX" target="_blank" rel="noopener">Ver perfil no Google</a>
+ </div>
+</section>
+
+<section class="final" id="contato">
+ <div class="wrap">
+  <p class="eyebrow">Contato</p>
+  <h2>Vamos cuidar de você, <em>com calma.</em></h2>
+  <div class="ctas">
+   <a class="btn solid" href="https://wa.me/message/NBMKC7WYYODZN1" target="_blank" rel="noopener">Agendar avaliação</a>
+   <a class="btn ghost" href="https://www.instagram.com/lenzaclinic/" target="_blank" rel="noopener">@lenzaclinic</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <span>© 2026 Lenza Clinic | Odontologia e Harmonização Orofacial</span>
+  <ul><li><a href="#odontologia">Odontologia</a></li><li><a href="#harmonizacao">Harmonização</a></li><li><a href="https://www.instagram.com/lenzaclinic/" target="_blank" rel="noopener">Instagram</a></li></ul>
+ </div>
+</footer>
+<script>
+(function(){
+ var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var h=document.getElementById('top'),pr=document.getElementById('prog');
+ var nav=document.getElementById('menu'),op=document.getElementById('open');
+ function setMenu(v){nav.classList.toggle('open',v);op.setAttribute('aria-expanded',v)}
+ op.onclick=function(){setMenu(true)};
+ document.getElementById('close').onclick=function(){setMenu(false)};
+ nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+ var v=document.getElementById('hv');
+ if(rm&&v){v.pause();v.removeAttribute('autoplay')}
+ v&&v.addEventListener('error',function(){v.style.display='none'});
+ var mf=document.getElementById('mf'),ws=[];
+ mf.innerHTML=mf.textContent.split(' ').map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');
+ ws=mf.querySelectorAll('.w');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+ var pars=document.querySelectorAll('.media.wide [data-par]'),tick=false;
+ function upd(){
+  var y=scrollY,H=document.documentElement.scrollHeight-innerHeight;
+  h.classList.toggle('scrolled',y>40);
+  pr.style.width=(H>0?y/H*100:0)+'%';
+  var r=mf.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.85-r.top)/(innerHeight*.5+r.height)));
+  ws.forEach(function(w,i){w.classList.toggle('on',rm||p>=(i+1)/ws.length)});
+  if(!rm)pars.forEach(function(im){var b=im.parentNode.getBoundingClientRect();if(b.bottom<0||b.top>innerHeight)return;var t=(b.top+b.height/2-innerHeight/2)/innerHeight;im.style.transform='translateY('+(t*-7).toFixed(2)+'%)'});
+  tick=false;
+ }
+ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+ addEventListener('resize',upd);upd();
+})();
+</script>
+</body>
+</html>
